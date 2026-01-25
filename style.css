@@ -1,0 +1,326 @@
+:root {
+    --noon-yellow: #FEE600;
+    --noon-black: #383838;
+    --noon-dark-gray: #404553;
+    --noon-light-gray: #F7F7FA;
+    --noon-border: #E2E5F1;
+    --noon-text: #404553;
+    --noon-green: #37B34A;
+    --noon-white: #FFFFFF;
+    
+    --font-primary: 'Proxima Nova', 'Roboto', 'Arial', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--noon-light-gray);
+    color: var(--noon-text);
+    line-height: 1.5;
+}
+
+/* Header */
+header {
+    background-color: var(--noon-yellow);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: black;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.search-bar {
+    flex: 1;
+    max-width: 600px;
+    margin: 0 2rem;
+    display: flex;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cart-count {
+    background: black;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+}
+
+/* Categories */
+.categories {
+    background: white;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--noon-border);
+    overflow-x: auto;
+}
+
+.category-list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding-bottom: 0.5rem;
+}
+
+.category-list li a {
+    text-decoration: none;
+    color: var(--noon-text);
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: var(--noon-light-gray);
+    transition: all 0.2s;
+}
+
+.category-list li a:hover {
+    background: #e0e0e0;
+}
+
+/* Products Grid */
+.section-title {
+    margin: 2rem 0 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-color: var(--noon-border);
+}
+
+.product-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    background: #f9f9f9;
+}
+
+.product-info {
+    padding: 1rem;
+}
+
+.product-name {
+    font-size: 0.95rem;
+    color: var(--noon-text);
+    margin-bottom: 0.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 2.8em;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 0.5rem;
+}
+
+.currency {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.add-btn {
+    width: 100%;
+    padding: 0.6rem;
+    background: white;
+    border: 2px solid var(--noon-yellow); /* Using Yellow as primary */
+    color: black;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.add-btn:hover {
+    background: var(--noon-yellow);
+}
+
+/* Cart & Checkout */
+.cart-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.cart-items, .checkout-summary, .address-form {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.cart-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--noon-border);
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.qty-btn {
+    width: 30px;
+    height: 30px;
+    background: var(--noon-light-gray);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.total-row {
+    font-weight: 800;
+    font-size: 1.2rem;
+    border-top: 1px solid var(--noon-border);
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.checkout-btn {
+    width: 100%;
+    background: #007bff; /* Blue for primary action or keep blue for trust? Noon uses Blue for checkout often */
+    background: #3866DF;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.checkout-btn:hover {
+    background: #2b50b5;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--noon-border);
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.cod-badge {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 0.5rem;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border: 1px solid #c8e6c9;
+}
+
+@media (max-width: 768px) {
+    .cart-layout {
+        grid-template-columns: 1fr;
+    }
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .search-bar {
+        margin: 0;
+        width: 100%;
+    }
+}
