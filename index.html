@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr Local - Online Shopping</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">Mr Local</a>
+
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="What are you looking for?" oninput="handleSearch()">
+            </div>
+
+            <div class="nav-icons">
+                <a href="cart.html" class="nav-item">
+                    <span>Cart</span>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="categories">
+        <div class="container">
+            <ul class="category-list">
+                <li><a href="#" class="category-link" data-category="all">All</a></li>
+                <li><a href="#" class="category-link" data-category="vegetables">Vegetables</a></li>
+                <li><a href="#" class="category-link" data-category="grocery">Grocery</a></li>
+                <li><a href="#" class="category-link" data-category="meat">Meat</a></li>
+                <li><a href="#" class="category-link" data-category="fish">Fish</a></li>
+                <li><a href="#" class="category-link" data-category="hypermarket">Hypermarket</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="container">
+
+        <div
+            style="background: #FDDA0D; padding: 2rem; border-radius: 8px; margin: 1.5rem 0; display: flex; align-items: center; justify-content: space-between;">
+            <div>
+                <h1 style="font-size: 2rem; margin-bottom: 0.5rem; color: #383838;">Fast Delivery <br>Right to Your Door
+                </h1>
+                <p style="font-size: 1.1rem;">Fresh Item • Cash on Delivery</p>
+            </div>
+            <img src="https://cdn-icons-png.flaticon.com/512/2979/2979669.png" alt="Banner" style="height: 150px;">
+        </div>
+
+        <h2 class="section-title">Recommended for you</h2>
+        <div id="product-grid" class="products-grid">
+            <!-- Products loaded by JS -->
+            <div style="padding: 2rem; width: 100%; text-align: center;">Loading products...</div>
+        </div>
+
+    </main>
+
+    <footer style="text-align: center; padding: 2rem; color: #666; margin-top: 3rem;">
+        <p>&copy; 2026 Mr Local. All Rights Reserved.</p>
+        <p><small style="opacity: 0.5;"><a href="admin/index.php" style="color: inherit; text-decoration: none;">Admin
+                    Panel</a></small></p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
